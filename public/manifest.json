@@ -1,0 +1,17 @@
+{
+  "name": "抬头望星 | Alex Star",
+  "short_name": "Alex Star",
+  "description": "Alex Star's Personal Portfolio - 仰望星空，脚踏实地",
+  "theme_color": "#0a0a23",
+  "background_color": "#0a0a23",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

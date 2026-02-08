@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-deep-space text-starlight-white overflow-x-hidden;
+    font-family: 'Source Han Sans', sans-serif;
+    /* 优化：使用硬件加速 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 优化：图片默认使用懒加载优化 */
+  img {
+    content-visibility: auto;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-midnight-purple/30 backdrop-blur-md border border-starlight-white/10 shadow-xl;
+    /* 优化：限制布局范围，避免影响外部 */
+    contain: layout style paint;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-starlight-white via-stardust-gold to-nebula-purple;
+  }
+
+  /* 优化：长列表内容可见性 */
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+
+  /* 优化：GPU 加速 */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  /* 优化：减少重绘区域 */
+  .isolate {
+    isolation: isolate;
+  }
+}
+
+/* 优化：动画性能 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 优化：自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
