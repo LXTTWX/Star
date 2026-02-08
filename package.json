@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://dwknkd.github.io/STAR/",
+  "homepage": "https://lxttwx.github.io/Star/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

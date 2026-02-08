@@ -7,7 +7,7 @@ export default defineConfig({
   // GitHub Pages 部署需要配置 base 路径
   // 如果仓库名是 username.github.io，则 base 为 '/'
   // 否则 base 为 '/仓库名/'
-  base: '/STAR/',
+  base: '/Star/',
   build: {
     // 生产环境不生成 sourcemap，减少构建时间
     sourcemap: false,
